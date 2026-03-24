@@ -1,6 +1,9 @@
 from fastapi import FastAPI
 from fastapi import UploadFile, File
 import os
+from model import model
+import numpy as np
+from preprocess import preprocess_image
 
 app = FastAPI()
 
@@ -16,7 +19,17 @@ async def predict(file: UploadFile = File(...)):
     with open(file_path, "wb") as buffer:
         buffer.write(await file.read())
 
+    # preprocess
+    processed = preprocess_image(file_path)
+
+    # prediction
+    preds = model.predict(processed)
+
+    # get top class
+    class_index = int(np.argmax(preds))
+    confidence = float(np.max(preds))
+
     return {
-        "message": "File saved successfully",
-        "filename": file.filename
+        "class": class_index,
+        "confidence": confidence
     }
