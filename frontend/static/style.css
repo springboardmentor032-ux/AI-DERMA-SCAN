@@ -527,3 +527,32 @@ footer {
 }
 
 .footer-dot { color: var(--border-md); }
+
+@media (max-width: 480px) {
+  header .upload-strip {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    height: auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .strip-left {
+    flex: 1 1 100%;
+  }
+
+  .strip-right {
+    flex: 1 1 100%;
+    justify-content: flex-start;
+  }
+
+  .strip-title {
+    font-size: 11px;
+  }
+
+  .strip-hint {
+    font-size: 10px;
+  }
+}
