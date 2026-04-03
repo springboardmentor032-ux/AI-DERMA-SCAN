@@ -12,7 +12,7 @@ A deep learning system for detecting facial aging signs (wrinkles, dark spots, p
 4. Face Detection and Prediction Pipeline (Haar Cascade Experiment)  
 5. Web UI for Image Upload and Visualization  
 6. Backend Pipeline for Model Inference  
-7. Export and Logging of Predictions  
+7. Testing, Generalization, and Result Validation 
 8. Documentation and Final Presentation  
 
 ---
