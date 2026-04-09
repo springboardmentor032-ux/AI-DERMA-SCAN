@@ -30,6 +30,7 @@ Solution:
 DermalScan AI provides an automated AI-based system for instant skin analysis using images.
 
 4. Features
+
 Image upload functionality
 Face detection using Haar Cascade
 Deep learning-based classification
@@ -38,7 +39,7 @@ Skincare recommendation system
 Interactive UI using Streamlit
  
  
- 5. Sample Output
+ 6. Sample Output
 
 The system detects the face, draws a bounding box, and displays the predicted skin condition with confidence percentage.
 <img width="512" height="384" alt="image" src="https://github.com/user-attachments/assets/119dfd78-3aa6-4f91-b7ed-18687b43b5dd" />
@@ -46,6 +47,8 @@ The system detects the face, draws a bounding box, and displays the predicted sk
 
 
 6. Technologies Used
+
+   
 Category	Tools
 Programming Language	Python
 Deep Learning	TensorFlow, Keras
@@ -55,7 +58,7 @@ Data Processing	NumPy, Pandas
 Visualization	Matplotlib
  
 
- 7. System Architecture
+ 8. System Architecture
 User uploads image
 Face detection using Haar Cascade
 Image preprocessing
@@ -64,7 +67,7 @@ Classification
 Result visualization
   
   
-  8. Dataset Description
+  9. Dataset Description
 Classes:
 Wrinkles
 Dark Spots
@@ -80,13 +83,14 @@ Zoom
 Flipping
   
   
-  9. Model Architecture
+  10. Model Architecture
 EfficientNetB0 (pretrained)
 Global Average Pooling
 Dense layers
 Dropout
 Softmax output
-10. Training Methodology
+
+11. Training Methodology
 Loss: Categorical Crossentropy
 Optimizer: Adam
 Metrics: Accuracy
@@ -98,20 +102,24 @@ EarlyStopping
 ModelCheckpoint
  
  
- 11. Model Evaluation
+ 12. Model Evaluation
 Accuracy and Loss
 Confusion Matrix
 Classification Report
  
  
- 12. Model Performance
+ 13. Model Performance
+
+      
 Metric	Value
 Accuracy	~93%
 Model	EfficientNetB0
 Classes	4
  
  
- 13. Working Methodology
+ 14. Working Methodology
+
+
 Upload image
 Detect face
 Preprocess image
@@ -120,7 +128,9 @@ Display results
 Show recommendations
  
  
- 14. Skincare Recommendation Logic
+ 15. Skincare Recommendation Logic
+
+
 Condition	Recommendation
 Wrinkles	Retinol, hydration, sunscreen
 Dark Spots	Vitamin C, Niacinamide
@@ -128,36 +138,47 @@ Puffy Eyes	Eye care, sleep
 Clear Skin	Maintain routine
  
  
- 15. Applications
+ 16. Applications
+
+
 Personal skincare monitoring
 Beauty industry
 Healthcare assistance
 AI-based recommendation systems
   
-  16. Advantages
+  17. Advantages
+
 Fast and automated
 Easy to use
 Cost-effective
 Scalable
  
  
- 17. Limitations
+ 18. Limitations
+
+
 Depends on image quality
 Limited categories
 Not a medical replacement
  
  
- 18. Future Enhancements
+ 19. Future Enhancements
+
+
 Mobile app
 Cloud deployment
 More skin conditions
 Real-time webcam detection
 
 
-19. Author
+20. Author
+
+
 Vaishnavi Kesanakurthi
 
 
 
-20. Conclusion
+21. Conclusion
+
+
 DermalScan AI demonstrates how deep learning and computer vision can be applied to real-world skincare analysis, providing fast and accessible insights.
