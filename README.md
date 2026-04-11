@@ -176,9 +176,12 @@ Real-time webcam detection
 
 Vaishnavi Kesanakurthi
 
+21.License
+
+This project is based on Education purpose
 
 
-21. Conclusion
 
+22. Conclusion
 
 DermalScan AI demonstrates how deep learning and computer vision can be applied to real-world skincare analysis, providing fast and accessible insights.
