@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DermalScan | AI Skin Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>DermalScan AI</h1>
+    </div>
+
+    <div class="main-container">
+        <div class="card">
+            <h3>Upload & Preview</h3>
+            <form action="/" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" id="fileInput" hidden onchange="this.form.submit()">
+                <div class="btn-group">
+                    <label for="fileInput" class="btn btn-ok">Choose Image</label>
+                    <a href="/" class="btn btn-cancel">Reset</a>
+                </div>
+            </form>
+            {% if filename %}
+                <img src="{{ url_for('static', filename='uploads/' + filename) }}" class="preview-img">
+            {% endif %}
+        </div>
+
+        <div class="card">
+            <h3>Analysis Results</h3>
+            <div class="results-list">
+                {% if results %}
+                    {% for item in results %}
+                        <div class="result-item">
+                            <div class="label-row">
+                                <span>{{ item.category }}</span>
+                                <strong>{{ item.percentage }}%</strong>
+                            </div>
+                            <div class="bar-bg">
+                                <div class="bar-fill" style="width: {{ item.percentage }}%;"></div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    <br>
+                    <a href="{{ url_for('static', filename='report.csv') }}" download class="btn btn-ok">Download CSV Report</a>
+                {% else %}
+                    <p>Select an image to see full 4-class prediction.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
