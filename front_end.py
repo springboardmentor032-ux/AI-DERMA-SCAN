@@ -26,34 +26,21 @@ st.markdown("""
 st.title("AI Skin Condition Classifier")
 uploaded_file=st.file_uploader("Upload Face Image", type=["jpg","jpeg","png"])
 
-# Load model with Keras 3.x compatibility
-# The .keras format is the modern Keras format compatible with Keras 3.x
+# Load model
 @st.cache_resource
 def load_model_cached():
     """Load and cache the model to avoid reloading on every interaction"""
     try:
-        # Primary: Load the .keras format model (Keras 3.x compatible)
         model = tf.keras.models.load_model(
-            "module4_results/efficientnet_face_skin_model_final.keras",
+            "module3(p2)_results/efficientnet_skin_model.h5",
             compile=False,
             safe_mode=False
         )
         st.success("✓ Model loaded successfully!")
         return model
     except Exception as e:
-        st.error(f"Failed to load .keras model: {str(e)[:200]}")
-        #Fallback: Try loading the .h5 format
-        try:
-            model = tf.keras.models.load_model(
-                "module3(p2)_results/efficientnet_skin_model.h5",
-                compile=False,
-                safe_mode=False
-            )
-            st.warning("⚠️ Loaded fallback .h5 model")
-            return model
-        except Exception as e2:
-            st.error(f"Failed to load all models: {str(e2)[:200]}")
-            raise
+        st.error(f"Failed to load model: {str(e)[:200]}")
+        raise
 
 # Load the model
 model = load_model_cached()
