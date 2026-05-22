@@ -1,6 +1,0 @@
-services:
-  - type: web
-    name: ai-derma-scan
-    env: docker
-    branch: SriAkshaya
-    dockerfilePath: Dockerfile
