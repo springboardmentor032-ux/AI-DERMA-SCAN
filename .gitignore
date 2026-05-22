@@ -1,4 +1,45 @@
+# Virtual environments
 sample/
+venv/
+.env
+.env.*
+
+# Data / large images
+sample_folder/
+augmented_images/
+data/
+datasets/
+
+# Model weights and checkpoints
+*.h5
+*.ckpt
+*.pt
+module3(p2)_results/
+
+# Built artifacts
+build/
+dist/
+*.egg-info/
+
+# Python caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Packages / wheels
+*.whlsample/
 __pycache__/
 *.py[cod]
 .DS_Store

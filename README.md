@@ -26,17 +26,17 @@ A comprehensive machine learning project for classifying facial skin conditions 
 
 ## Installation
 
-1. **Clone or download the project**
-2. **Create virtual environment**:
+1. Clone or download the project
+2. Create a virtual environment:
    ```bash
    python -m venv sample
    ```
-3. **Activate environment**:
-   - Windows: `sample\Scripts\activate`
-   - Linux/Mac: `source sample/bin/activate`
-4. **Install dependencies**:
+3. Activate the environment:
+   - Windows: sample\Scripts\activate
+   - Mac/Linux: source sample/bin/activate
+4. Install dependencies:
    ```bash
-   pip install streamlit tensorflow pillow opencv-python matplotlib pandas seaborn scikit-learn
+   pip install -r requirements.txt
    ```
 
 ## Usage
@@ -91,25 +91,38 @@ The trained model achieves high accuracy on facial skin condition classification
 
 ## Requirements
 
-- Python 3.8+
-- TensorFlow 2.x
-- OpenCV
-- Streamlit
-- PIL/Pillow
-- NumPy, Pandas, Matplotlib, Seaborn
+- Python 3.11 (tested)
+- See `requirements.txt` for the full dependency list (use `pip install -r requirements.txt`).
 
-## Dataset
+Core packages include: TensorFlow, OpenCV, Streamlit, Pillow, NumPy, Pandas, Matplotlib, Seaborn
 
-The project uses augmented facial images categorized into 4 classes:
-- Clear skin
-- Dark spots
-- Puffy eyes
-- Wrinkles
+## Dataset & Models
+
+The repository does not include large datasets or trained model binaries. To reproduce results:
+
+- Run the augmentation and training scripts included in this repo.
+- Or download pre-trained model artifacts from project storage (e.g., S3, Google Drive) and place them in `module3(p2)_results/`.
+
+Trained models and large datasets are intentionally excluded from version control. See `.gitignore` for excluded paths.
+
+## Usage Notes
+
+Running the Streamlit frontend:
+
+```bash
+streamlit run front_end.py
+# then open http://localhost:8501 in your browser
+```
 
 ## Contributing
 
-This is an internship project. For improvements or modifications, ensure all dependencies are installed and test changes thoroughly.
+This is an internship project. For improvements or modifications, please test changes locally and open a pull request. For questions, contact the project maintainer.
 
 ## License
 
-This project is for educational purposes.
+See the `LICENSE` file in this repository for license details.
+
+---
+_Notes:_
+- The `sample/` directory contains a local virtual environment and should not be committed.
+- Large images are stored locally under `augmented_images/` or `sample_folder/` and are excluded from version control.
